@@ -47,7 +47,9 @@ connectDb(mongo_uri).then(() => {
   //assets 
   app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 //routes 
-
+app.get('/',(req , res)=>{
+  res.send('hi from test')
+})
 app.use(process.env.API_DOMAIN+'/products',productsRouter)
 app.use(process.env.API_DOMAIN+'/categories',categoryRouter)
 app.use(process.env.API_DOMAIN+'/sellers',sellersRouter)
