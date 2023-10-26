@@ -85,12 +85,12 @@ else
     } 
     
     catch (error) {
-     
-    
+        console.log(error);
+ 
             fs.unlink(''+path, (err) => {
                
               });
-              errorHandler(res,400, {error:error.message})
+              errorHandler(res,400, {error:error.error})
               
 }
 }
